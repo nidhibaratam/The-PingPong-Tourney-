@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff400;
+}
+
+#gameTitle {
+    color: #fff400;
+    text-align: center;
+    font-size: 22px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 0 #000, 0 0 10px #ff0;
+}
+
+#gameContainer {
+    position: relative;
+}
+
+#pongCanvas {
+    background: #3b0063;
+    border: 6px solid #fff400;
+    border-radius: 8px;
+    display: block;
+    max-width: 95vw;
+    height: auto;
+    box-shadow: 0 0 25px #ff0, inset 0 0 10px #ff0;
+}
+
+#score {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    text-shadow: 2px 2px 0 #000, 0 0 8px #fff400;
+    user-select: none;
+    z-index: 5;
+}
+
+#gameMessage {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #00ffff;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 2px 2px #000, 0 0 8px #0ff;
+    display: none;
+    z-index: 10;
+}
+
+#restartBtn {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    font-size: 14px;
+    background-color: #fff400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    display: none;
+    box-shadow: 0 0 10px #fff400, 2px 2px #000;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#rulesOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000ee;
+    color: #fff400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 999;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+    animation: flicker 1.2s infinite alternate;
+}
+
+#rulesOverlay h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0 #000, 0 0 6px #fff400;
+}
+
+#rulesOverlay ul {
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#rulesOverlay li {
+    margin: 10px 0;
+}
+
+#startBtn {
+    padding: 12px 24px;
+    font-size: 12px;
+    background-color: #fff400;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #fff400, 2px 2px #000;
+    font-family: 'Press Start 2P', cursive;
+}
+
+@keyframes flicker {
+    from { opacity: 1; }
+    to { opacity: 0.85; }
+}
+
+@media (max-width: 600px) {
+    #gameTitle {
+        font-size: 16px;
+    }
+
+    #rulesOverlay h2 {
+        font-size: 16px;
+    }
+
+    #rulesOverlay ul {
+        font-size: 10px;
+    }
+
+    #gameMessage {
+        font-size: 14px;
+    }
+
+    #restartBtn,
+    #startBtn {
+        font-size: 12px;
+        padding: 10px 18px;
+    }
+}
