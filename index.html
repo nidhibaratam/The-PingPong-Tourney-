@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>The PingPong Tourney</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Game Title -->
+    <h1 id="gameTitle">🏓 The PingPong Tourney 🏓</h1>
+
+    <!-- Rules Overlay -->
+    <div id="rulesOverlay">
+        <h2>How to Play</h2>
+        <ul>
+            <li>🎯 First to 10 points wins!</li>
+            <li>🕹️ Move your paddle with your mouse or finger</li>
+            <li>🤖 Defeat the AI and claim glory!</li>
+        </ul>
+        <button id="startBtn">START GAME</button>
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameContainer">
+        <canvas id="pongCanvas" width="800" height="500">
+            Your browser does not support HTML5 canvas.
+        </canvas>
+        <div id="score">
+            <span id="playerScore">0</span> : <span id="aiScore">0</span>
+        </div>
+        <div id="gameMessage"></div>
+        <button id="restartBtn">PLAY AGAIN</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
